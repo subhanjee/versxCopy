@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: #18181b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-family: "Orbitron", system-ui;
+  font-size: 5rem;
+  font-weight: bold;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Orbitron", system-ui;
+}
+p {
+  font-family: "Inter", sans-serif;
+}
+a {
+  font-family: "inter", sans-serif;
+}
+.my-btn {
+  border-radius: 0.4rem;
+  border: solid 1px #dedf1b;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+:hover.my-btn {
+  background-color: #dedf1b;
+  color: black;
+}
+.tab-btn {
+  background-color: #303032;
+  border-radius: 2rem;
+  color: white;
+}
+.tab-hover {
+  color: #727070;
+}
+:hover.tab-hover {
+  color: white;
+}
+.main-btn {
+  background-color: #050601;
+  box-shadow: 0px 1px 2px 0px #dedf1b;
+  color: #dedf1b;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+:hover.main-btn {
+  background-color: #dedf1b;
+  color: black;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-family: "Orbitron", system-ui;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* styles.module.css */
+/* styles.module.css */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.textAnimation {
+  animation: fadeInOut 6s infinite; /* Total duration should cover all text elements */
+}
+
+.textAnimation:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.textAnimation:nth-child(2) {
+  animation-delay: 2s; /* Adjust delay to match the duration of one text */
+}
+
+.textAnimation:nth-child(3) {
+  animation-delay: 4s; /* Adjust delay to match the duration of one text */
+}
+
+/* Container for image with glowing border */
+.border-glow {
+  position: relative;
+  display: inline-block;
+  border-radius: 1.5rem;
+}
+
+/* Image glowing border */
+.border-glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent; /* Make the initial border invisible */
+  border-radius: 2rem; /* Add border radius to match the container */
+  animation: moving-glow 4s linear infinite;
+  pointer-events: none; /* Prevent interference with interactions */
+}
+
+/* Keyframes for moving the glowing effect */
+@keyframes moving-glow {
+  0% {
+    border-image: linear-gradient(
+        210deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 255, 0, 0)
+      )
+      1;
+  }
+  20% {
+    border-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0),
+        rgba(222, 223, 27, 1)
+      )
+      1;
+  }
+  80% {
+    border-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0),
+        rgba(222, 223, 27, 1)
+      )
+      1;
+  }
+  100% {
+    border-image: linear-gradient(
+        20deg,
+        rgba(222, 223, 27, 1),
+        rgba(0, 255, 0, 0)
+      )
+      1;
+  }
+}

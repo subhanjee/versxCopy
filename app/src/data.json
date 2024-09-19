@@ -1,0 +1,12 @@
+{
+    "menuItems": [
+      { "name": "About", "link": "#" },
+    
+      { "name": "Music", "link": "#" },
+      { "name": "Finance", "link": "#" },
+      { "name": "Tokenomics", "link": "#" },
+      { "name": "Roadmap", "link": "#" },
+      { "name": "Contact", "link": "#" }
+    ]
+  }
+  
